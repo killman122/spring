@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 //设置类运行器
-@RunWith(SpringJUnit4ClassRunner.class)
-//设置Spring环境对应的配置类
+@RunWith(SpringJUnit4ClassRunner.class)//运行spring的单元测试, 这是Spring整合Junit的专用类运行器
+//设置Spring环境对应的配置类applicationContext.xml的上下文的配置
 @ContextConfiguration(classes = SpringConfig.class)
 public class AccountServiceTest {
-    //支持自动装配注入bean
+    //支持自动装配注入bean, 定义业务层接口对象
     @Autowired
     private AccountService accountService;
 
